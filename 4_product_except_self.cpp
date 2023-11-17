@@ -18,7 +18,7 @@ public:
             output[i] = left;
             left = left * nums[i];
         }
-        for (int i = size; i >= 0; i--)
+        for (int i = size - 1; i >= 0; i--)
         {
             output[i] = output[i] * right;
             right = right * nums[i];
