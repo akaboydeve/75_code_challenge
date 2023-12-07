@@ -20,8 +20,8 @@ public:
             return 0;
         }
 
-        int one = 1;
-        int two = 1;
+        int prev1 = 1;
+        int prev2 = 1;
 
         for (int i = 1; i < s.length(); i++)
         {
@@ -29,19 +29,19 @@ public:
 
             if (s[i] != '0')
             {
-                current = one;
+                current = prev1;
             }
 
             int value = stoi(s.substr(i - 1, 2));
             if (value >= 10 && value <= 26)
             {
-                current += two;
+                current += prev2;
             }
 
-            two = one;
-            one = current;
+            prev2 = prev1;
+            prev1 = current;
         }
 
-        return one;
+        return prev1;
     }
 };
