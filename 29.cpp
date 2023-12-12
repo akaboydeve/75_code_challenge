@@ -16,7 +16,7 @@ class Solution
 public:
     vector<vector<int>> pacificAtlantic(vector<vector<int>> &heights)
     {
-        vector<std::vector<int>> ans;
+        vector<vector<int>> ans;
 
         int m = heights.size();
         int n = heights[0].size();
