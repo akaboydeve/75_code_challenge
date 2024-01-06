@@ -30,13 +30,13 @@ public:
             mapS[tempMap].push_back(str);
         }
 
-        vector<vector<string>> anagrams;
+        vector<vector<string>> res;
         for (const auto &p : mapS)
         {
-            anagrams.push_back(p.second);
+            res.push_back(p.second);
         }
 
-        return anagrams;
+        return res;
     }
 };
 
